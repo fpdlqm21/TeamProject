@@ -9,7 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:Layout_weight="1">
+        android:layout_weight="1"
+        >
 
         <Button
             android:id="@+id/button1"
@@ -27,4 +28,5 @@
             android:layout_alignParentTop="true"
             android:text="다음"/>
     </RelativeLayout>
+
 </LinearLayout>
