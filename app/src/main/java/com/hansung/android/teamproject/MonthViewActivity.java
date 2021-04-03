@@ -50,9 +50,7 @@ public class MonthViewActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
 
     public void setDate(int year, int month, int date) {
 
