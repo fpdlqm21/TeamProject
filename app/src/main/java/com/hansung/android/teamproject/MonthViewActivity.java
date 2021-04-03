@@ -28,24 +28,26 @@ public class MonthViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mCal = Calendar.getInstance(); //Calendar 객체 생성
-        setDate(mCal.get(Calendar.MONTH)+1); //setDate method에 파라미터로 월 전달
+        int year= mCal.get(Calendar.YEAR);
+        int month = mCal.get(Calendar.MONTH);
+        int day = 1;
+        setDate(year, month, day); //setDate method에 파라미터로 월 전달
         gridview = findViewById(R.id.gridview);
         adapter = new Adapter(this, daylist);
         gridview.setAdapter(adapter); //adapter 연결
 
         TextView yearmonthTv = findViewById(R.id.yearmonth); //yearmonth 텍스트뷰 객체생성
-        yearmonthTv.setText(mCal.get(Calendar.YEAR) + "년" +(mCal.get(Calendar.MONTH)+1)+"월");
-
+        yearmonthTv.setText(year + "년" +(month+1)+"월");
     }
 
-    public void setDate(int month) {
+    public void setDate(int year, int month, int day) {
 
         daylist = new ArrayList();
-        mCal.set(Calendar.MONTH, month-1); //calendar 객체의 월 설정
+        mCal.set(year, month, day); //calendar 객체의 월 설정
 
-        for(int i=0; i<=mCal.get(Calendar.DAY_OF_MONTH); i++)
+        for(int i=1; i<mCal.get(Calendar.DAY_OF_WEEK); i++)
         {
-            daylist.add("");
+            daylist.add(""); //
         }
         for(int i=0; i<mCal.getActualMaximum(Calendar.DAY_OF_MONTH); i++) { //달의 마지막 날짜까지 반복
             daylist.add(i+1); //리스트에 추가

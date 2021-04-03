@@ -52,10 +52,17 @@
             android:textSize="18sp"
             android:paddingLeft="18dp"
             android:paddingRight="18dp"
-            android:text="월"/>
+            android:text="일"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="월"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:textSize="18sp"
             android:paddingLeft="18dp"
             android:paddingRight="18dp"
@@ -88,13 +95,6 @@
             android:paddingLeft="18dp"
             android:paddingRight="18dp"
             android:text="토"/>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="18sp"
-            android:paddingLeft="18dp"
-            android:paddingRight="18dp"
-            android:text="일"/>
 
     </TableRow>
 
