@@ -99,15 +99,13 @@ public class MonthViewActivity extends AppCompatActivity {
                 }
             }
         });
-//        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(MonthViewActivity.this, year+"." +(month+1)+"."+(position-mCal.get(Calendar.DAY_OF_WEEK)+2),
-//                        Toast.LENGTH_SHORT).show();
-//                System.out.println(year+"." + (month+1)+"."+(position-mCal.get(Calendar.DAY_OF_WEEK)+2)); //출력 확인용
-//
-//            }
-//        });
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MonthViewActivity.this, year+"." +(month+1)+"."+(position-mCal.get(Calendar.DAY_OF_WEEK)+2),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
