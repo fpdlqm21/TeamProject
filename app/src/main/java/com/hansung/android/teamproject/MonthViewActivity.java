@@ -57,7 +57,7 @@ public class MonthViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), MonthViewActivity.class);
-                if(month < 12) //해가 지나지 않을경우
+                if(month < 11) //해가 지나지 않을경우
                 {
                     month++;
                     intent.putExtra("year", year); //intent 객체로 보낼 정보
@@ -82,7 +82,7 @@ public class MonthViewActivity extends AppCompatActivity {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), MonthViewActivity.class); //다음 액티비티로 전달할 intent 객체생성
 
-                if(month > 1) //해가 지나지않을경우
+                if(month > 0) //해가 지나지않을경우
                 {
                     month--;
                     intent.putExtra("year", year);
